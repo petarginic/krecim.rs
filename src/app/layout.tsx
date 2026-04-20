@@ -1,0 +1,195 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Krečenje Beograd | Moler Beograd – Krecim.rs | Besplatna Procena",
+  description:
+    "Profesionalno krečenje, gletovanje i gipsani radovi u Beogradu. Iskusni majstori, povoljna cena, besplatna procena na licu mesta. Pozovite odmah: 062 145 70 55",
+  keywords: [
+    "krečenje Beograd",
+    "moler Beograd",
+    "gletovanje Beograd",
+    "gipsani radovi Beograd",
+    "lepljenje tapeta Beograd",
+    "adaptacija stana Beograd",
+    "majstor za krečenje Beograd",
+    "molerski radovi Beograd cena",
+    "besplatna procena krečenje",
+    "krečenje stana Beograd",
+    "kreč Novi Beograd",
+    "moler Zemun",
+    "moler Vračar",
+  ],
+  authors: [{ name: "Krecim.rs" }],
+  creator: "Krecim.rs",
+  publisher: "Krecim.rs",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: "https://krecim.rs",
+  },
+  openGraph: {
+    title: "Krečenje Beograd | Moler Beograd – Krecim.rs",
+    description:
+      "Iskusni majstori za krečenje, gletovanje i gipsane radove u Beogradu. Besplatna procena na licu mesta. Pozovite: 062 145 70 55",
+    url: "https://krecim.rs",
+    siteName: "Krecim.rs",
+    locale: "sr_RS",
+    type: "website",
+    images: [
+      {
+        url: "https://krecim.rs/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Krecim.rs – Profesionalno krečenje i molerski radovi Beograd",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Krečenje Beograd | Moler Beograd – Krecim.rs",
+    description: "Profesionalno krečenje i gletovanje u Beogradu. Besplatna procena. 062 145 70 55",
+  },
+  verification: {
+    google: "DODAJ_GOOGLE_SEARCH_CONSOLE_KOD_OVDE",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="sr">
+      <head>
+        <link rel="canonical" href="https://krecim.rs" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "LocalBusiness",
+                  "@id": "https://krecim.rs/#business",
+                  name: "Krecim.rs – Krečenje i Molerski Radovi Beograd",
+                  description:
+                    "Profesionalno krečenje, gletovanje, lepljenje tapeta i gipsani radovi u Beogradu. Besplatna procena na licu mesta.",
+                  url: "https://krecim.rs",
+                  telephone: "+381621457055",
+                  email: "info@krecim.rs",
+                  priceRange: "$$",
+                  image: "https://krecim.rs/og-image.jpg",
+                  logo: "https://krecim.rs/logo.png",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "Beograd",
+                    addressLocality: "Beograd",
+                    addressRegion: "Beograd",
+                    postalCode: "11000",
+                    addressCountry: "RS",
+                  },
+                  geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: 44.8176,
+                    longitude: 20.4569,
+                  },
+                  areaServed: [
+                    { "@type": "City", name: "Beograd" },
+                    { "@type": "AdministrativeArea", name: "Novi Beograd" },
+                    { "@type": "AdministrativeArea", name: "Zemun" },
+                    { "@type": "AdministrativeArea", name: "Vračar" },
+                    { "@type": "AdministrativeArea", name: "Čukarica" },
+                    { "@type": "AdministrativeArea", name: "Palilula" },
+                    { "@type": "AdministrativeArea", name: "Savski venac" },
+                    { "@type": "AdministrativeArea", name: "Voždovac" },
+                  ],
+                  openingHoursSpecification: [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      opens: "08:00",
+                      closes: "20:00",
+                    },
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      dayOfWeek: "Saturday",
+                      opens: "08:00",
+                      closes: "16:00",
+                    },
+                  ],
+                  hasOfferCatalog: {
+                    "@type": "OfferCatalog",
+                    name: "Molerske i Građevinske Usluge",
+                    itemListElement: [
+                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Krečenje Beograd", description: "Profesionalno unutrašnje i spoljašnje krečenje zidova u Beogradu" } },
+                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gletovanje Beograd", description: "Fino i grubo gletovanje zidova, sanacija pukotina" } },
+                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gipsani Radovi Beograd", description: "Pregradni zidovi, spušteni plafoni, gips ploče" } },
+                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Lepljenje Tapeta Beograd", description: "Profesionalno postavljanje svih vrsta tapeta" } },
+                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Adaptacija Stana Beograd", description: "Kompletna adaptacija stanova i poslovnih prostora ključ u ruke" } },
+                    ],
+                  },
+                  aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: "5.0",
+                    reviewCount: "150",
+                    bestRating: "5",
+                  },
+                  sameAs: [
+                    "https://www.instagram.com/krecim.rs",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://krecim.rs/#website",
+                  url: "https://krecim.rs",
+                  name: "Krecim.rs",
+                  description: "Profesionalno krečenje i molerski radovi Beograd",
+                  publisher: { "@id": "https://krecim.rs/#business" },
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: "https://krecim.rs",
+                  },
+                },
+                {
+                  "@type": "FAQPage",
+                  mainEntity: [
+                    {
+                      "@type": "Question",
+                      name: "Koliko košta krečenje po kvadratu u Beogradu?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Cena krečenja zavisi od kvadrature, stanja zidova i obima posla. Nudimo besplatnu procenu na licu mesta na celoj teritoriji Beograda. Pozovite nas na 062 145 70 55.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Da li radite besplatne procene u Beogradu?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Da, nudimo potpuno besplatnu procenu na celoj teritoriji Beograda. Naš majstor dolazi na lice mesta i daje pisanu ponudu bez obaveza.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Koliko brzo možete da počnete sa radovima?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Najčešće možemo da počnemo za 3 do 7 dana od dogovora. Za hitne slučajeve pozovite nas direktno.",
+                      },
+                    },
+                  ],
+                },
+              ],
+            }),
+          }}
+        />
+      </head>
+      <body className="antialiased">{children}</body>
+    </html>
+  );
+}
