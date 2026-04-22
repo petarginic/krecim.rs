@@ -66,7 +66,7 @@ export default function Hero() {
             <div className="absolute top-0 right-0 w-[100%] h-full rounded-bl-[80px]  from-purple-100 via-purple-50 to-white/0 -z-0" />
             <div className="relative z-10 w-full h-[calc(100vh-80px)] max-h-[700px] w-[100%]">
               <Image
-                src="/images/image.png"
+                src="/images/krecenje-cena-po-kvadratu.png"
                 alt="Profesionalni moler Beograd"
                 fill
                 className="object-contain object-bottom"
