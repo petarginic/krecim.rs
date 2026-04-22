@@ -54,18 +54,27 @@ export default function Contact() {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 max-w-md mx-auto">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 max-w-2xl mx-auto">
           <a
-            href="tel:0621457055"
-            className="flex-1 flex items-center justify-center gap-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-4 rounded-2xl transition-colors duration-200 text-sm shadow-lg shadow-purple-500/25"
+            href="tel:0617316982"
+            className="flex-1 flex items-center justify-center gap-3 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold px-6 py-4 rounded-2xl transition-colors duration-200 text-sm"
           >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
             </svg>
             Pozovite nas
           </a>
           <a
-            href="https://wa.me/381621457055"
+            href="viber://chat?number=0617316982"
+            className="flex-1 flex items-center justify-center gap-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-4 rounded-2xl transition-colors duration-200 text-sm shadow-lg shadow-purple-500/25"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+            </svg>
+            Pišite na Viber
+          </a>
+          <a
+            href="https://wa.me/381617316982"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-4 rounded-2xl transition-colors duration-200 text-sm shadow-lg shadow-green-500/25"
@@ -80,7 +89,7 @@ export default function Contact() {
         {/* Instagram CTA */}
         <div className="mt-12 max-w-3xl mx-auto">
           <a
-            href="https://instagram.com/krecim.rs"
+            href="https://www.instagram.com/krecim.rs?utm_source=qr&igsh=cW83YmNvaWk2dXdv"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-5 bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border border-purple-100 hover:border-purple-200 rounded-2xl px-7 py-5 transition-all duration-300 hover:shadow-md"

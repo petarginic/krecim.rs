@@ -90,10 +90,10 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:0621457055"
+              href="tel:0617316982"
               className="bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md shadow-purple-600/20"
             >
-              Pozovite: 062 145 70 55
+              Pozovite: 061 731 69 82
             </a>
           </div>
 
@@ -143,10 +143,10 @@ export default function Navbar() {
           ))}
           <div className="pt-2">
             <a
-              href="tel:0621457055"
+              href="tel:0617316982"
               className="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-colors"
             >
-              Pozovite: 062 145 70 55
+              Pozovite: 061 731 69 82
             </a>
           </div>
         </div>

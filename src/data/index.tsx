@@ -4,9 +4,9 @@ import React from "react";
 
 export const navLinks = [
   { label: "Početna", href: "#hero" },
-  { label: "O nama", href: "#o-nama" },
   { label: "Usluge", href: "#usluge" },
   { label: "Radovi", href: "#radovi" },
+  { label: "O nama", href: "#o-nama" },
   { label: "Galerija", href: "#galerija" },
   { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
@@ -251,7 +251,7 @@ export const stats = [
   { id: 1, value: "500+", label: "Završenih projekata", icon: HomeIcon },
   { id: 2, value: "20+", label: "Godina iskustva", icon: CalendarIcon },
   { id: 3, value: "100%", label: "Zadovoljnih klijenata", icon: ThumbsUpIcon },
-  { id: 4, value: "12h", label: "Prosečno vreme odgovora", icon: BoltIcon },
+  { id: 4, value: "1h", label: "Prosečno vreme odgovora", icon: BoltIcon },
 ];
 
 // ─── Hero badges ──────────────────────────────────────────────────────────────
@@ -304,7 +304,7 @@ const ClockIcon = ({ className }: { className?: string }) => (
 );
 
 export const contactInfo = [
-  { icon: PhoneIcon, label: "Telefon", value: "062 145 70 55", href: "tel:0621457055" },
+  { icon: PhoneIcon, label: "Telefon", value: "061 731 69 82", href: "tel:0617316982" },
   { icon: EnvelopeIcon, label: "Email", value: "info@krecim.rs", href: "mailto:info@krecim.rs" },
   { icon: MapPinIcon, label: "Lokacija", value: "Beograd, Srbija", href: "https://maps.google.com" }
 ];

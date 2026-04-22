@@ -4,6 +4,17 @@ import { badges } from "@/data";
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden bg-white">
+      {/* Mobile: faint background image behind title */}
+      <div className="absolute inset-0 lg:hidden pointer-events-none">
+        <Image
+          src="/images/krecenje-cena-po-kvadratu.png"
+          alt=""
+          fill
+          className="object-contain object-right-top opacity-[0.18]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent" />
+      </div>
+
       {/* Decorative SVG lines */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -22,11 +33,11 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-120px)] items-center">
 
           {/* Left — text */}
-          <div className="pt-28 pb-12 sm:pt-32 sm:pb-16 lg:py-32 z-10 text-center lg:text-left">
+          <div className="pt-28 pb-6 sm:pt-32 sm:pb-8 lg:py-32 z-10 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] tracking-tight">
               Profesionalno Krečenje
               <br />
-              <span className="font-normal">Vašeg Doma</span>
+              <span className="font-normal">u Beogradu</span>
             </h1>
 
             <p className="mt-4 text-base text-gray-500">
@@ -56,7 +67,7 @@ export default function Hero() {
             <div className="relative z-10 w-full h-[calc(100vh-80px)] max-h-[700px] w-[100%]">
               <Image
                 src="/images/image.png"
-                alt="Profesionalni majstor"
+                alt="Profesionalni moler Beograd"
                 fill
                 className="object-contain object-bottom"
                 priority

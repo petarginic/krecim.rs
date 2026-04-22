@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Krečenje Beograd | Moler Beograd – Krecim.rs | Besplatna Procena",
   description:
-    "Profesionalno krečenje, gletovanje i gipsani radovi u Beogradu. Iskusni majstori, povoljna cena, besplatna procena na licu mesta. Pozovite odmah: 062 145 70 55",
+    "Profesionalno krečenje, gletovanje i gipsani radovi u Beogradu. Iskusni majstori, povoljna cena, besplatna procena na licu mesta. Pozovite odmah: 061 731 69 82",
   keywords: [
     "krečenje Beograd",
     "moler Beograd",
@@ -16,9 +16,24 @@ export const metadata: Metadata = {
     "molerski radovi Beograd cena",
     "besplatna procena krečenje",
     "krečenje stana Beograd",
+    "krečenje lokala Beograd",
+    "krečenje sa materijalom Beograd",
+    "krečenje povoljno Beograd",
+    "povoljno krečenje stanova Beograd",
+    "sahara tehnika Beograd",
+    "spuštanje plafona Beograd",
+    "mašinsko krečenje Beograd",
+    "profesionalni moleri Beograd",
+    "molerski radovi Beograd cene",
+    "krečenje nakon vlage Beograd",
+    "moler Novi Beograd",
+    "molerske usluge Zemun",
+    "krečenje Zemun",
     "kreč Novi Beograd",
     "moler Zemun",
     "moler Vračar",
+    "moler Voždovac",
+    "krečenje Zvezdara",
   ],
   authors: [{ name: "Krecim.rs" }],
   creator: "Krecim.rs",
@@ -34,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Krečenje Beograd | Moler Beograd – Krecim.rs",
     description:
-      "Iskusni majstori za krečenje, gletovanje i gipsane radove u Beogradu. Besplatna procena na licu mesta. Pozovite: 062 145 70 55",
+      "Iskusni majstori za krečenje, gletovanje i gipsane radove u Beogradu. Besplatna procena na licu mesta. Pozovite: 061 731 69 82",
     url: "https://krecim.rs",
     siteName: "Krecim.rs",
     locale: "sr_RS",
@@ -51,10 +66,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Krečenje Beograd | Moler Beograd – Krecim.rs",
-    description: "Profesionalno krečenje i gletovanje u Beogradu. Besplatna procena. 062 145 70 55",
+    description: "Profesionalno krečenje i gletovanje u Beogradu. Besplatna procena. 061 731 69 82",
   },
   verification: {
-    google: "DODAJ_GOOGLE_SEARCH_CONSOLE_KOD_OVDE",
+    google: "8X2ZHUdTnJn35hnfWy88arSq96s5BQjGvb2BJD2KUS8",
   },
 };
 
@@ -66,7 +81,6 @@ export default function RootLayout({
   return (
     <html lang="sr">
       <head>
-        <link rel="canonical" href="https://krecim.rs" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -74,13 +88,13 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@graph": [
                 {
-                  "@type": "LocalBusiness",
+                  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
                   "@id": "https://krecim.rs/#business",
                   name: "Krecim.rs – Krečenje i Molerski Radovi Beograd",
                   description:
                     "Profesionalno krečenje, gletovanje, lepljenje tapeta i gipsani radovi u Beogradu. Besplatna procena na licu mesta.",
                   url: "https://krecim.rs",
-                  telephone: "+381621457055",
+                  telephone: "+381617316982",
                   email: "info@krecim.rs",
                   priceRange: "$$",
                   image: "https://krecim.rs/og-image.jpg",
@@ -140,7 +154,7 @@ export default function RootLayout({
                     bestRating: "5",
                   },
                   sameAs: [
-                    "https://www.instagram.com/krecim.rs",
+                    "https://www.instagram.com/krecim.rs?utm_source=qr&igsh=cW83YmNvaWk2dXdv",
                   ],
                 },
                 {
@@ -150,10 +164,6 @@ export default function RootLayout({
                   name: "Krecim.rs",
                   description: "Profesionalno krečenje i molerski radovi Beograd",
                   publisher: { "@id": "https://krecim.rs/#business" },
-                  potentialAction: {
-                    "@type": "SearchAction",
-                    target: "https://krecim.rs",
-                  },
                 },
                 {
                   "@type": "FAQPage",
@@ -163,7 +173,7 @@ export default function RootLayout({
                       name: "Koliko košta krečenje po kvadratu u Beogradu?",
                       acceptedAnswer: {
                         "@type": "Answer",
-                        text: "Cena krečenja zavisi od kvadrature, stanja zidova i obima posla. Nudimo besplatnu procenu na licu mesta na celoj teritoriji Beograda. Pozovite nas na 062 145 70 55.",
+                        text: "Cena krečenja zavisi od kvadrature, stanja zidova i obima posla. Nudimo besplatnu procenu na licu mesta na celoj teritoriji Beograda. Pozovite nas na 061 731 69 82.",
                       },
                     },
                     {

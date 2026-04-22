@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
+import Image from "next/image";
 
 const post = blogPosts.find((p) => p.slug === "koliko-kosta-krecenje-stana")!;
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     url: `https://krecim.rs/blog/${post.slug}`,
     type: "article",
     publishedTime: post.date,
+    images: [{ url: "https://krecim.rs/images/blog/krecenje_savski_venac.jpg", width: 1200, height: 630 }],
   },
 };
 
@@ -29,6 +31,32 @@ const apartments = [
 export default function Page() {
   return (
     <article className="bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            headline: post.metaTitle,
+            description: post.metaDescription,
+            url: `https://krecim.rs/blog/${post.slug}`,
+            datePublished: post.date,
+            dateModified: post.date,
+            inLanguage: "sr-RS",
+            author: { "@type": "Organization", name: "Krecim.rs", url: "https://krecim.rs" },
+            publisher: { "@id": "https://krecim.rs/#business" },
+            mainEntityOfPage: { "@type": "WebPage", "@id": `https://krecim.rs/blog/${post.slug}` },
+          },
+          {
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "Koliko košta krečenje garsonjere u Beogradu?", acceptedAnswer: { "@type": "Answer", text: "Krečenje garsonjere (20–30 m²) košta od 150 do 300 evra. Sa gletovanjem, cena je od 350 do 600 evra." } },
+              { "@type": "Question", name: "Koliko košta krečenje dvosobnog stana u Beogradu?", acceptedAnswer: { "@type": "Answer", text: "Krečenje dvosobnog stana (50–65 m²) košta od 400 do 700 evra. Sa gletovanjem od 800 do 1.300 evra. Cene uključuju rad i materijal." } },
+              { "@type": "Question", name: "Kada je neophodno gletovanje pre krečenja?", acceptedAnswer: { "@type": "Answer", text: "Gletovanje je neophodno kada zidovi imaju vidljive neravnine ili pukotine, kada se ljušti stara boja ili kada je stan starije gradnje (pre 2000. godine)." } },
+              { "@type": "Question", name: "Šta je uključeno u cenu krečenja stana?", acceptedAnswer: { "@type": "Answer", text: "U cenu je uvek uključeno: dolazak na procenu, zaštita poda i nameštaja, grundiranje zidova, dve ruke boje, čišćenje i pisana garancija na radove." } },
+            ],
+          },
+        ],
+      })}} />
       <div className="bg-gradient-to-br from-emerald-50 to-white border-b border-gray-100 py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <nav className="text-xs text-gray-400 mb-6 flex items-center gap-2">
@@ -40,14 +68,21 @@ export default function Page() {
           </nav>
           <span className="bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full">Cene</span>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 leading-tight">
-            Koliko Košta Krečenje Stana u Beogradu? (2025)
+            Koliko Košta Krečenje Stana u Beogradu? (2026)
           </h1>
           <p className="text-gray-500 mt-4 text-lg leading-relaxed">{post.excerpt}</p>
           <div className="flex items-center gap-4 mt-6 text-sm text-gray-400">
-            <span>16. april 2025.</span>
+            <span>16. april 2026.</span>
             <span>·</span>
             <span>{post.readTime} čitanja</span>
           </div>
+        </div>
+      </div>
+
+      {/* Hero image */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-6">
+        <div className="relative h-56 sm:h-72 rounded-2xl overflow-hidden top-0">
+          <Image src="/images/blog/krecenje_savski_venac.jpg" alt="Gotovo krečenje spavaće sobe u Zemunu" fill className="object-cover" priority />
         </div>
       </div>
 
@@ -90,6 +125,20 @@ export default function Page() {
         <div className="prose prose-gray prose-lg max-w-none">
           <p className="text-sm text-gray-400 -mt-2">
             * Cene su procenjene i mogu varirati. Za tačnu cifru potrebna je procena na licu mesta.
+          </p>
+
+          <h2>Krečenje stana od 60 m² – koliko košta?</h2>
+          <p>
+            Stan od 60 m² (tipičan dvosoban) je najčešće tražena kvadratura. Konkretna procena:
+          </p>
+          <ul>
+            <li><strong>Samo krečenje (zidovi ravni, 2 ruke boje):</strong> 430–580 €</li>
+            <li><strong>Krečenje + grundiranje:</strong> 500–650 €</li>
+            <li><strong>Gletovanje + krečenje (kompletan posao):</strong> 900–1.200 €</li>
+            <li><strong>Trajanje:</strong> 2 dana (samo krečenje) ili 4–5 dana (sa gletovanjem)</li>
+          </ul>
+          <p>
+            Napomena: 60 m² je površina stana, a ne zidova. Ukupna površina zidova u dvosobnom stanu od 60 m² je obično između 130 i 160 m² (uključujući plafon), u zavisnosti od visine i rasporeda.
           </p>
 
           <h2>Zašto se cene toliko razlikuju?</h2>
@@ -147,8 +196,8 @@ export default function Page() {
           <div className="bg-purple-50 border border-purple-100 rounded-2xl p-6 my-8">
             <p className="font-bold text-gray-900 text-lg">Dobijte tačnu cenu za vaš stan</p>
             <p className="text-gray-600 mt-1">Dolazimo na besplatnu procenu. Merimo, gledamo stanje zidova i dajemo pisanu ponudu isti dan.</p>
-            <a href="tel:0621457055" className="inline-flex items-center gap-2 mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
-              Pozovite: 062 145 70 55
+            <a href="tel:0617316982" className="inline-flex items-center gap-2 mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
+              Pozovite: 061 731 69 82
             </a>
           </div>
 

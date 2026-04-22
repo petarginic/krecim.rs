@@ -12,7 +12,7 @@ const galleryItems = [
   { id: 6,  room: "Spavaća soba",  service: "Gipsani Radovi", src: "/images/lepljenje-tapeta-kancelarija-beograd.jpg", span: "col-span-2 lg:col-start-2 lg:col-span-2 lg:row-start-3 lg:row-span-2" },
   // Redovi 3–4: ostaje kao pre
   { id: 7,  room: "Hodnik zgrade",   service: "Krečenje i gipsani Radovi",         src: "/images/gipsani-radovi-terasa-beograd.jpg",          span: "lg:row-span-2" },
-  { id: 8,  room: "Dnevna soba",  service: "Gipsani Radovi",       src: "/images/gletovanje-decija-soba-beograd.jpg",       span: "col-span-2 lg:col-span-2" },
+  { id: 8,  room: "Dnevna soba",  service: "Gipsani Radovi",       src: "/images/gletovanje-decija-soba-beograd.jpg",       span: "sm:col-span-2" },
   { id: 9,  room: "Spavaća soba",   service: "Krečenje",         src: "/images/krecenje-predsoblije-beograd.png",         span: "" },
   { id: 10, room: "Hodnik zgrade",       service: "Krečenje",   src: "/images/gipsani-radovi-terasa-beograd.png",        span: "" }
 ];

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
+import Image from "next/image";
 
 const post = blogPosts.find((p) => p.slug === "krecenje-stanova-beograd")!;
 
@@ -15,12 +16,26 @@ export const metadata: Metadata = {
     url: `https://krecim.rs/blog/${post.slug}`,
     type: "article",
     publishedTime: post.date,
+    images: [{ url: "https://krecim.rs/images/blog/krecenje_stari_grad.jpg", width: 1200, height: 630 }],
   },
 };
 
 export default function Page() {
   return (
     <article className="bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.metaTitle,
+        description: post.metaDescription,
+        url: `https://krecim.rs/blog/${post.slug}`,
+        datePublished: post.date,
+        dateModified: post.date,
+        inLanguage: "sr-RS",
+        author: { "@type": "Organization", name: "Krecim.rs", url: "https://krecim.rs" },
+        publisher: { "@id": "https://krecim.rs/#business" },
+        mainEntityOfPage: { "@type": "WebPage", "@id": `https://krecim.rs/blog/${post.slug}` },
+      })}} />
       {/* Hero */}
       <div className="bg-gradient-to-br from-purple-50 to-white border-b border-gray-100 py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
@@ -33,14 +48,21 @@ export default function Page() {
           </nav>
           <span className="bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full">Vodič</span>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 leading-tight">
-            Krečenje Stanova u Beogradu – Kompletan Vodič za 2025.
+            Krečenje Stanova u Beogradu - Kompletan Vodič za 2026.
           </h1>
           <p className="text-gray-500 mt-4 text-lg leading-relaxed">{post.excerpt}</p>
           <div className="flex items-center gap-4 mt-6 text-sm text-gray-400">
-            <span>10. april 2025.</span>
+            <span>10. april 2026.</span>
             <span>·</span>
             <span>{post.readTime} čitanja</span>
           </div>
+        </div>
+      </div>
+
+      {/* Hero image */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-6">
+        <div className="relative h-56 sm:h-72 rounded-2xl overflow-hidden">
+          <Image src="/images/blog/krecenje_stari_grad.jpg" alt="Profesionalno krečenje dnevne sobe u Beogradu" fill className="object-cover" priority />
         </div>
       </div>
 
@@ -129,8 +151,8 @@ export default function Page() {
           <div className="bg-purple-50 border border-purple-100 rounded-2xl p-6 my-8">
             <p className="font-bold text-gray-900 text-lg">Zakažite besplatnu procenu danas</p>
             <p className="text-gray-600 mt-1">Dolazimo na lice mesta, pregledamo prostor i dajemo vam tačnu cenu. Bez obaveza.</p>
-            <a href="tel:0621457055" className="inline-flex items-center gap-2 mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
-              Pozovite: 062 145 70 55
+            <a href="tel:0617316982" className="inline-flex items-center gap-2 mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
+              Pozovite: 061 731 69 82
             </a>
           </div>
 

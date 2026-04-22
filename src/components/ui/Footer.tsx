@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
             <div className="mt-5 flex gap-2">
               <a
-                href="https://instagram.com/krecim.rs"
+                href="https://www.instagram.com/krecim.rs?utm_source=qr&igsh=cW83YmNvaWk2dXdv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-gray-800 hover:bg-purple-600 inline-flex items-center justify-center transition-colors duration-200 text-white"
@@ -37,7 +37,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/381621457055"
+                href="https://wa.me/381617316982"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-gray-800 hover:bg-green-600 inline-flex items-center justify-center transition-colors duration-200 text-white"
@@ -84,7 +84,7 @@ export default function Footer() {
               <Link href="/blog" className="hover:text-purple-400 transition-colors">Blog</Link>
             </h4>
             <ul className="space-y-2.5">
-              {blogPosts.map((post) => (
+              {blogPosts.slice(0, 5).map((post) => (
                 <li key={post.slug}>
                   <Link
                     href={`/blog/${post.slug}`}
@@ -94,6 +94,11 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/blog" className="text-sm text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                  Svi članci →
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -103,7 +108,7 @@ export default function Footer() {
           <div className="flex gap-5">
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
             <a href="/#kontakt" className="hover:text-white transition-colors">Kontakt</a>
-            <a href="tel:0621457055" className="hover:text-white transition-colors">062 145 70 55</a>
+            <a href="tel:0617316982" className="hover:text-white transition-colors">061 731 69 82</a>
           </div>
         </div>
       </div>

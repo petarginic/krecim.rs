@@ -3,8 +3,8 @@ import Link from "next/link";
 import { blogPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Blog o Krečenju i Adaptaciji | Saveti i Cene – Krecim.rs",
-  description: "Korisni saveti o krečenju, gletovanju i adaptaciji stanova u Beogradu. Cene, vodiči i odgovori na najčešća pitanja od iskusnih majstora.",
+  title: "Blog o Krečenju u Beogradu | Saveti, Cene, Vodiči – Krecim.rs",
+  description: "Korisni saveti o krečenju, gletovanju i adaptaciji stanova u Beogradu. Realne cene, vodiči i odgovori na pitanja od iskusnih majstora.",
   alternates: { canonical: "https://krecim.rs/blog" },
   openGraph: {
     title: "Blog o Krečenju i Adaptaciji – Krecim.rs",
@@ -17,6 +17,7 @@ const categoryColors: Record<string, string> = {
   "Vodič": "bg-purple-100 text-purple-700",
   "Saveti": "bg-blue-100 text-blue-700",
   "Cene": "bg-emerald-100 text-emerald-700",
+  "Lokalno": "bg-indigo-100 text-indigo-700",
 };
 
 function formatDate(dateStr: string) {
@@ -32,7 +33,7 @@ export default function BlogPage() {
       <section className="bg-white border-b border-gray-100 py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-purple-600 font-semibold text-sm uppercase tracking-widest">Blog</span>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">Saveti o Krečenju i Adaptaciji</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mt-2">Saveti o Krečenju u Beogradu</h1>
           <p className="text-gray-500 mt-3 max-w-xl mx-auto">
             Korisni vodiči, realne cene i odgovori na pitanja koja svaki vlasnik stana u Beogradu ima pre nego što pozove majstora.
           </p>
@@ -68,7 +69,7 @@ export default function BlogPage() {
         </Link>
 
         {/* Rest of posts */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {rest.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
               <div className="bg-white rounded-2xl border border-gray-200 p-7 h-full hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/8 hover:-translate-y-0.5 transition-all duration-300">
@@ -101,8 +102,8 @@ export default function BlogPage() {
           <h2 className="text-2xl font-bold">Imate pitanje? Pozovite nas.</h2>
           <p className="text-purple-200 mt-2 max-w-md mx-auto">Besplatna procena na teritoriji Beograda. Odgovaramo u roku od sat vremena.</p>
           <div className="flex flex-wrap gap-3 justify-center mt-6">
-            <a href="tel:0621457055" className="inline-flex items-center gap-2 bg-white text-purple-700 font-bold px-6 py-3 rounded-xl hover:bg-purple-50 transition-colors">
-              062 145 70 55
+            <a href="tel:0617316982" className="inline-flex items-center gap-2 bg-white text-purple-700 font-bold px-6 py-3 rounded-xl hover:bg-purple-50 transition-colors">
+              061 731 69 82
             </a>
             <a href="/#kontakt" className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white font-semibold px-6 py-3 rounded-xl transition-colors border border-white/20">
               Pošalji Upit

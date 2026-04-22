@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
+import Image from "next/image";
 
 const post = blogPosts.find((p) => p.slug === "cena-krecenja-po-m2")!;
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     url: `https://krecim.rs/blog/${post.slug}`,
     type: "article",
     publishedTime: post.date,
+    images: [{ url: "https://krecim.rs/images/blog/krecenje_blok_a.jpg", width: 1200, height: 630 }],
   },
 };
 
@@ -30,6 +32,31 @@ const priceTable = [
 export default function Page() {
   return (
     <article className="bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            headline: post.metaTitle,
+            description: post.metaDescription,
+            url: `https://krecim.rs/blog/${post.slug}`,
+            datePublished: post.date,
+            dateModified: post.date,
+            inLanguage: "sr-RS",
+            author: { "@type": "Organization", name: "Krecim.rs", url: "https://krecim.rs" },
+            publisher: { "@id": "https://krecim.rs/#business" },
+            mainEntityOfPage: { "@type": "WebPage", "@id": `https://krecim.rs/blog/${post.slug}` },
+          },
+          {
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "Koliko košta krečenje po kvadratnom metru u Beogradu?", acceptedAnswer: { "@type": "Answer", text: "Krečenje (samo boja, 2 sloja) košta od 2.5 do 4 evra po m². Krečenje sa grundiranjem od 3 do 5 evra. Gletovanje i krečenje zajedno od 7 do 12 evra po m²." } },
+              { "@type": "Question", name: "Šta utiče na cenu krečenja po m²?", acceptedAnswer: { "@type": "Answer", text: "Na cenu utiču stanje zidova, vrsta boje, pristupačnost zidova i lokacija u Beogradu. Zidovi sa pukotinama i neravninama zahtevaju dodatnu pripremu." } },
+              { "@type": "Question", name: "Da li cena uključuje materijal?", acceptedAnswer: { "@type": "Answer", text: "To uvek treba da proverite. Neki majstori daju cenu samo za rad, drugi nude sve uključeno. Preporučujemo da tražite ponudu sa materijalom radi lakšeg poređenja." } },
+            ],
+          },
+        ],
+      })}} />
       <div className="bg-gradient-to-br from-emerald-50 to-white border-b border-gray-100 py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <nav className="text-xs text-gray-400 mb-6 flex items-center gap-2">
@@ -41,14 +68,21 @@ export default function Page() {
           </nav>
           <span className="bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full">Cene</span>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 leading-tight">
-            Cena Krečenja po m² u Beogradu – Kompletan Cenovnik za 2025.
+            Cena Krečenja po m² u Beogradu – Kompletan Cenovnik za 2026.
           </h1>
           <p className="text-gray-500 mt-4 text-lg leading-relaxed">{post.excerpt}</p>
           <div className="flex items-center gap-4 mt-6 text-sm text-gray-400">
-            <span>14. april 2025.</span>
+            <span>14. april 2026.</span>
             <span>·</span>
             <span>{post.readTime} čitanja</span>
           </div>
+        </div>
+      </div>
+
+      {/* Hero image */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-6">
+        <div className="relative h-56 sm:h-72 rounded-2xl overflow-hidden">
+          <Image src="/images/blog/krecenje_blok_a.jpg" alt="Cena krečenja po kvadratnom metru u Beogradu 2026" fill className="object-cover" priority />
         </div>
       </div>
 
@@ -56,7 +90,7 @@ export default function Page() {
         <div className="prose prose-gray prose-lg max-w-none">
 
           <p>
-            Jedna od prvih stvari koje vlasnici stanova u Beogradu pitaju je: "Koliko košta krečenje po kvadratnom metru?" Odgovor nije jednostavan jer zavisi od više faktora — ali u ovom tekstu dajemo realan raspon cena za 2025. godinu, bez ulepšavanja.
+            Jedna od prvih stvari koje vlasnici stanova u Beogradu pitaju je: "Koliko košta krečenje po kvadratnom metru?" Odgovor nije jednostavan jer zavisi od više faktora — ali u ovom tekstu dajemo realan raspon cena za 2026. godinu, bez ulepšavanja.
           </p>
 
           <h2>Cenovnik krečenja i molerskih radova u Beogradu</h2>
@@ -136,8 +170,8 @@ export default function Page() {
           <div className="bg-purple-50 border border-purple-100 rounded-2xl p-6 my-8">
             <p className="font-bold text-gray-900 text-lg">Dobijte tačnu cenu za vaš stan</p>
             <p className="text-gray-600 mt-1">Dolazimo besplatno, merimo prostor i dajemo pisanu ponudu. Bez iznenađenja na kraju.</p>
-            <a href="tel:0621457055" className="inline-flex items-center gap-2 mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
-              Pozovite: 062 145 70 55
+            <a href="tel:0617316982" className="inline-flex items-center gap-2 mt-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
+              Pozovite: 061 731 69 82
             </a>
           </div>
 
