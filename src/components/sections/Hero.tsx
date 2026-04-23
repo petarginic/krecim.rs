@@ -69,8 +69,10 @@ export default function Hero() {
                 src="/images/krecenje-cena-po-kvadratu.png"
                 alt="Profesionalni moler Beograd"
                 fill
+                sizes="(max-width: 1024px) 0vw, (max-width: 1280px) 50vw, 640px"
                 className="object-contain object-bottom"
                 priority
+                loading="eager"
               />
               <div className="absolute inset-0" />
 

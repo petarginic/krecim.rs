@@ -66,7 +66,7 @@ export default function Page() {
           </h1>
           <p className="text-gray-500 mt-4 text-lg leading-relaxed">{post.excerpt}</p>
           <div className="flex items-center gap-4 mt-6 text-sm text-gray-400">
-            <span>24. april 2026.</span>
+            <span>23. april 2026.</span>
             <span>·</span>
             <span>{post.readTime} čitanja</span>
           </div>

@@ -5,7 +5,7 @@ import { useState } from "react";
 const projects = [
   {
     id: 1,
-    title: "Dnevna oba — Novi Beograd",
+    title: "Dnevna soba — Novi Beograd",
     tags: ["Krečenje", "Gletovanje"],
     before: "/images/krecenje-dnevna-soba-pre-beograd.jpg",
     after: "/images/krecenje-dnevna-soba-posle-beograd.png",

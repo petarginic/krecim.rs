@@ -8,6 +8,7 @@ export const navLinks = [
   { label: "Radovi", href: "#radovi" },
   { label: "O nama", href: "#o-nama" },
   { label: "Galerija", href: "#galerija" },
+  { label: "Cenovnik", href: "#cenovnik" },
   { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
 ];

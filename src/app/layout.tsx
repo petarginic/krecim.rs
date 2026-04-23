@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://krecim.rs/og-image.jpg",
+        url: "https://krecim.rs/images/krecenje-dnevna-soba-beograd.jpg",
         width: 1200,
         height: 630,
         alt: "Krecim.rs – Profesionalno krečenje i molerski radovi Beograd",
@@ -67,6 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Krečenje Beograd | Moler Beograd – Krecim.rs",
     description: "Profesionalno krečenje i gletovanje u Beogradu. Besplatna procena. 061 731 69 82",
+    images: ["https://krecim.rs/images/krecenje-dnevna-soba-beograd.jpg"],
   },
   verification: {
     google: "8X2ZHUdTnJn35hnfWy88arSq96s5BQjGvb2BJD2KUS8",
@@ -97,8 +99,8 @@ export default function RootLayout({
                   telephone: "+381617316982",
                   email: "info@krecim.rs",
                   priceRange: "$$",
-                  image: "https://krecim.rs/og-image.jpg",
-                  logo: "https://krecim.rs/logo.png",
+                  image: "https://krecim.rs/images/krecenje-dnevna-soba-beograd.jpg",
+                  logo: "https://krecim.rs/images/krecenje-dnevna-soba-beograd.jpg",
                   address: {
                     "@type": "PostalAddress",
                     streetAddress: "Beograd",
@@ -140,10 +142,10 @@ export default function RootLayout({
                     "@type": "OfferCatalog",
                     name: "Molerske i Građevinske Usluge",
                     itemListElement: [
-                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Krečenje Beograd", description: "Profesionalno unutrašnje i spoljašnje krečenje zidova u Beogradu" } },
-                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gletovanje Beograd", description: "Fino i grubo gletovanje zidova, sanacija pukotina" } },
-                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gipsani Radovi Beograd", description: "Pregradni zidovi, spušteni plafoni, gips ploče" } },
-                      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Lepljenje Tapeta Beograd", description: "Profesionalno postavljanje svih vrsta tapeta" } },
+                      { "@type": "Offer", priceSpecification: { "@type": "PriceSpecification", minPrice: "2.5", maxPrice: "3.5", priceCurrency: "EUR", unitText: "m²" }, itemOffered: { "@type": "Service", name: "Krečenje Beograd", description: "Profesionalno unutrašnje i spoljašnje krečenje zidova u Beogradu" } },
+                      { "@type": "Offer", priceSpecification: { "@type": "PriceSpecification", minPrice: "4", maxPrice: "5", priceCurrency: "EUR", unitText: "m²" }, itemOffered: { "@type": "Service", name: "Gletovanje Beograd", description: "Fino i grubo gletovanje zidova, sanacija pukotina" } },
+                      { "@type": "Offer", priceSpecification: { "@type": "PriceSpecification", minPrice: "15", maxPrice: "25", priceCurrency: "EUR", unitText: "m²" }, itemOffered: { "@type": "Service", name: "Gipsani Radovi Beograd", description: "Pregradni zidovi, spušteni plafoni, gips ploče" } },
+                      { "@type": "Offer", priceSpecification: { "@type": "PriceSpecification", minPrice: "4.5", maxPrice: "6.5", priceCurrency: "EUR", unitText: "m²" }, itemOffered: { "@type": "Service", name: "Lepljenje Tapeta Beograd", description: "Profesionalno postavljanje svih vrsta tapeta" } },
                       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Adaptacija Stana Beograd", description: "Kompletna adaptacija stanova i poslovnih prostora ključ u ruke" } },
                     ],
                   },
@@ -173,7 +175,7 @@ export default function RootLayout({
                       name: "Koliko košta krečenje po kvadratu u Beogradu?",
                       acceptedAnswer: {
                         "@type": "Answer",
-                        text: "Cena krečenja zavisi od kvadrature, stanja zidova i obima posla. Nudimo besplatnu procenu na licu mesta na celoj teritoriji Beograda. Pozovite nas na 061 731 69 82.",
+                        text: "Cena krečenja u Beogradu za 2026. godinu: krečenje u belu boju (2 sloja) 2,5–3,5 €/m², krečenje sa gletovanjem 4–5 €/m², uklanjanje tapeta i krečenje 4,5–6,5 €/m², kompletna sanacija (buđ, malter, 3 sloja) 6–8 €/m². Za tačnu ponudu nudimo besplatnu procenu na licu mesta. Pozovite 061 731 69 82.",
                       },
                     },
                     {
@@ -200,6 +202,13 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">{children}</body>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-10897736557" strategy="afterInteractive" />
+      <Script id="google-ads" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-10897736557');`}
+      </Script>
     </html>
   );
 }

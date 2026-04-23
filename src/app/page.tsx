@@ -7,6 +7,7 @@ import About from "@/components/sections/About";
 import StatsBanner from "@/components/sections/StatsBanner";
 import Gallery from "@/components/sections/Gallery";
 import Testimonials from "@/components/sections/Testimonials";
+import Pricing from "@/components/sections/Pricing";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <StatsBanner />
         <Gallery />
         <Testimonials />
+        <Pricing />
         <FAQ />
         <Contact />
       </main>
