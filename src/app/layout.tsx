@@ -167,35 +167,6 @@ export default function RootLayout({
                   description: "Profesionalno krečenje i molerski radovi Beograd",
                   publisher: { "@id": "https://krecim.rs/#business" },
                 },
-                {
-                  "@type": "FAQPage",
-                  mainEntity: [
-                    {
-                      "@type": "Question",
-                      name: "Koliko košta krečenje po kvadratu u Beogradu?",
-                      acceptedAnswer: {
-                        "@type": "Answer",
-                        text: "Cena krečenja u Beogradu za 2026. godinu: krečenje u belu boju (2 sloja) 2,5–3,5 €/m², krečenje sa gletovanjem 4–5 €/m², uklanjanje tapeta i krečenje 4,5–6,5 €/m², kompletna sanacija (buđ, malter, 3 sloja) 6–8 €/m². Za tačnu ponudu nudimo besplatnu procenu na licu mesta. Pozovite 061 731 69 82.",
-                      },
-                    },
-                    {
-                      "@type": "Question",
-                      name: "Da li radite besplatne procene u Beogradu?",
-                      acceptedAnswer: {
-                        "@type": "Answer",
-                        text: "Da, nudimo potpuno besplatnu procenu na celoj teritoriji Beograda. Naš majstor dolazi na lice mesta i daje pisanu ponudu bez obaveza.",
-                      },
-                    },
-                    {
-                      "@type": "Question",
-                      name: "Koliko brzo možete da počnete sa radovima?",
-                      acceptedAnswer: {
-                        "@type": "Answer",
-                        text: "Najčešće možemo da počnemo za 3 do 7 dana od dogovora. Za hitne slučajeve pozovite nas direktno.",
-                      },
-                    },
-                  ],
-                },
               ],
             }),
           }}

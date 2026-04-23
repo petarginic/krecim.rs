@@ -1,11 +1,12 @@
 const rows = [
-  { usluga: "Krečenje u belu boju (2 sloja)", eurM2: "2,5 – 3,5 €", rsd: "550 – 700 din" },
-  { usluga: "Krečenje u boji (2 sloja)", eurM2: "3 – 4 €", rsd: "650 – 750 din" },
-  { usluga: "Krečenje sa osnovnim gletovanjem", eurM2: "4 – 5 €", rsd: "800 – 950 din" },
-  { usluga: "Krečenje sa sanacijom malih pukotina", eurM2: "4 – 6 €", rsd: "800 – 1.050 din" },
-  { usluga: "Uklanjanje tapeta + krečenje", eurM2: "4,5 – 6,5 €", rsd: "900 – 1.200 din" },
-  { usluga: "Krečenje intenzivnim ili dekorativnim bojama", eurM2: "5 – 7 €", rsd: "1.000 – 1.400 din" },
-  { usluga: "Kompletna sanacija (buđ, malter, 3 sloja)", eurM2: "6 – 8 €", rsd: "1.200 – 1.600 din" },
+  { usluga: "Krečenje u belu boju (2 sloja)", eurM2: "2,5 – 3,5 €" },
+  { usluga: "Krečenje u boji (2 sloja)", eurM2: "3 – 4 €" },
+  { usluga: "Krečenje sa osnovnim gletovanjem", eurM2: "5 – 6 €" },
+  { usluga: "Krečenje sa sanacijom malih pukotina", eurM2: "4 – 6 €" },
+  { usluga: "Uklanjanje tapeta + krečenje", eurM2: "4,5 – 6,5 €" },
+  { usluga: "Krečenje intenzivnim ili dekorativnim bojama", eurM2: "5 – 7 €" },
+  { usluga: "Sahara tehnika (dekorativno krečenje)", eurM2: "8 – 15 €" },
+  { usluga: "Kompletna sanacija (buđ, malter, 3 sloja)", eurM2: "6 – 8 €" },
 ];
 
 const included = [
@@ -47,8 +48,7 @@ export default function Pricing() {
             <thead>
               <tr className="bg-purple-600 text-white text-left">
                 <th className="px-5 py-4 font-semibold rounded-tl-2xl">Usluga</th>
-                <th className="px-5 py-4 font-semibold whitespace-nowrap">Cena po m²</th>
-                <th className="px-5 py-4 font-semibold rounded-tr-2xl whitespace-nowrap hidden sm:table-cell">Okvirna cena (RSD)</th>
+                <th className="px-5 py-4 font-semibold rounded-tr-2xl whitespace-nowrap">Okvirna cena po m²</th>
               </tr>
             </thead>
             <tbody>
@@ -59,7 +59,6 @@ export default function Pricing() {
                 >
                   <td className="px-5 py-4 font-medium text-gray-800">{row.usluga}</td>
                   <td className="px-5 py-4 font-bold text-purple-700 whitespace-nowrap">{row.eurM2}</td>
-                  <td className="px-5 py-4 text-gray-500 text-xs whitespace-nowrap hidden sm:table-cell">{row.rsd}</td>
                 </tr>
               ))}
             </tbody>
